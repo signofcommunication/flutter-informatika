@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
-import '../../../routes/app_routes.dart';
+import '../../../routes/app_pages.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -29,70 +29,70 @@ class HomeView extends GetView<HomeController> {
             'Widgets',
             'Explore Flutter Widgets',
             Icons.widgets,
-            Routes.WIDGETS,
+            Routes.widgets,
           ),
           _buildMenuCard(
             context,
             'Material Design',
             'Material Design Components',
             Icons.design_services,
-            Routes.MATERIAL_DESIGN,
+            Routes.materialDesign,
           ),
           _buildMenuCard(
             context,
             'Basic Widget',
             'Basic Widget Examples',
             Icons.auto_awesome,
-            Routes.BASIC_WIDGET,
+            Routes.basicWidget,
           ),
           _buildMenuCard(
             context,
             'Layout Structure',
             'Layout and Structure',
             Icons.view_quilt,
-            Routes.LAYOUT_STRUCTURE,
+            Routes.layoutStructure,
           ),
           _buildMenuCard(
             context,
             'Input Forms',
             'Form Input Widgets',
             Icons.input,
-            Routes.INPUT_FORMS,
+            Routes.inputForms,
           ),
           _buildMenuCard(
             context,
             'Scrolling List',
             'Scrolling and List Widgets',
             Icons.list,
-            Routes.SCROLLING_LIST,
+            Routes.scrollingList,
           ),
           _buildMenuCard(
             context,
             'API Integration',
             'REST API Integration',
             Icons.cloud,
-            Routes.API_INTEGRATION,
+            Routes.apiIntegration,
           ),
           _buildMenuCard(
             context,
             'Local Storage',
             'Local Data Storage',
             Icons.storage,
-            Routes.LOCAL_STORAGE,
+            Routes.localStorage,
           ),
           _buildMenuCard(
             context,
             'Device Features',
             'Device Hardware Features',
             Icons.phone_android,
-            Routes.DEVICE_FEATURES,
+            Routes.deviceFeatures,
           ),
           _buildMenuCard(
             context,
             'Study Case',
             'Practical Study Cases',
             Icons.school,
-            Routes.STUDY_CASE,
+            Routes.studyCase,
           ),
         ],
       ),
@@ -110,7 +110,8 @@ class HomeView extends GetView<HomeController> {
       margin: const EdgeInsets.only(bottom: 12.0),
       elevation: 2,
       child: ListTile(
-        leading: Icon(icon, size: 40, color: Theme.of(context).colorScheme.primary),
+        leading:
+            Icon(icon, size: 40, color: Theme.of(context).colorScheme.primary),
         title: Text(
           title,
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),

@@ -1,17 +1,14 @@
 import 'package:get/get.dart';
 
-class Api_integrationController extends GetxController {
-  @override
+class ApiIntegrationController extends GetxController {
   void onInit() {
     super.onInit();
   }
 
-  @override
   void onReady() {
     super.onReady();
   }
 
-  @override
   void onClose() {
     super.onClose();
   }

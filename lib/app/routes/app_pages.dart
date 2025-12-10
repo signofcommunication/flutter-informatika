@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../../pages/home_page.dart';
 
 import '../modules/widgets/bindings/widgets_binding.dart';
 import '../modules/widgets/views/widgets_view.dart';
@@ -77,229 +78,233 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const initial = Routes.home;
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.home,
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.WIDGETS,
+      name: '/home_page',
+      page: () => HomePage(),
+    ),
+    GetPage(
+      name: _Paths.widgets,
       page: () => const WidgetsView(),
       binding: WidgetsBinding(),
     ),
-    
+
     // Material Design Routes
     GetPage(
-      name: _Paths.MATERIAL_DESIGN,
+      name: _Paths.materialDesign,
       page: () => const MaterialDesignView(),
       binding: MaterialDesignBinding(),
     ),
     GetPage(
-      name: _Paths.MD_APPBAR,
+      name: _Paths.mdAppbar,
       page: () => const MdAppbarPage(),
     ),
     GetPage(
-      name: _Paths.MD_MATERIALAPP,
+      name: _Paths.mdMaterialapp,
       page: () => const MdMaterialappPage(),
     ),
     GetPage(
-      name: _Paths.MD_SCAFFOLD,
+      name: _Paths.mdScaffold,
       page: () => const MdScaffoldPage(),
     ),
     GetPage(
-      name: _Paths.MD_CONTAINER,
+      name: _Paths.mdContainer,
       page: () => const MdContainerPage(),
     ),
     GetPage(
-      name: _Paths.MD_CENTER,
+      name: _Paths.mdCenter,
       page: () => const MdCenterPage(),
     ),
     GetPage(
-      name: _Paths.MD_COLUMN,
+      name: _Paths.mdColumn,
       page: () => const MdColumnPage(),
     ),
     GetPage(
-      name: _Paths.MD_ROW,
+      name: _Paths.mdRow,
       page: () => const MdRowPage(),
     ),
     GetPage(
-      name: _Paths.MD_LISTVIEW,
+      name: _Paths.mdListview,
       page: () => const MdListviewPage(),
     ),
     GetPage(
-      name: _Paths.MD_GRIDVIEW,
+      name: _Paths.mdGridview,
       page: () => const MdGridviewPage(),
     ),
     GetPage(
-      name: _Paths.MD_STACK,
+      name: _Paths.mdStack,
       page: () => const MdStackPage(),
     ),
     GetPage(
-      name: _Paths.MD_ASPECTRATIO,
+      name: _Paths.mdAspectratio,
       page: () => const MdAspectratioPage(),
     ),
     GetPage(
-      name: _Paths.MD_PADDING,
+      name: _Paths.mdPadding,
       page: () => const MdPaddingPage(),
     ),
     GetPage(
-      name: _Paths.MD_EXPANDED,
+      name: _Paths.mdExpanded,
       page: () => const MdExpandedPage(),
     ),
     GetPage(
-      name: _Paths.MD_SIZEDBOX,
+      name: _Paths.mdSizedbox,
       page: () => const MdSizedboxPage(),
     ),
     GetPage(
-      name: _Paths.MD_CARD,
+      name: _Paths.mdCard,
       page: () => const MdCardPage(),
     ),
     GetPage(
-      name: _Paths.MD_INKWELL,
+      name: _Paths.mdInkwell,
       page: () => const MdInkwellPage(),
     ),
     GetPage(
-      name: _Paths.MD_IMAGE,
+      name: _Paths.mdImage,
       page: () => const MdImagePage(),
     ),
     GetPage(
-      name: _Paths.MD_CIRCLEAVATAR,
+      name: _Paths.mdCircleavatar,
       page: () => const MdCircleavatarPage(),
     ),
     GetPage(
-      name: _Paths.MD_ICON,
+      name: _Paths.mdIcon,
       page: () => const MdIconPage(),
     ),
     GetPage(
-      name: _Paths.MD_BOTTOMSHEET,
+      name: _Paths.mdBottomsheet,
       page: () => const MdBottomsheetPage(),
     ),
     GetPage(
-      name: _Paths.MD_ALERTDIALOG,
+      name: _Paths.mdAlertdialog,
       page: () => const MdAlertdialogPage(),
     ),
     GetPage(
-      name: _Paths.MD_SNACKBAR,
+      name: _Paths.mdSnackbar,
       page: () => const MdSnackbarPage(),
     ),
     GetPage(
-      name: _Paths.MD_DRAWER,
+      name: _Paths.mdDrawer,
       page: () => const MdDrawerPage(),
     ),
     GetPage(
-      name: _Paths.MD_BOTTOMNAVBAR,
+      name: _Paths.mdBottomnavbar,
       page: () => const MdBottomnavbarPage(),
     ),
-    
+
     // Basic Widget Routes
     GetPage(
-      name: _Paths.BASIC_WIDGET,
+      name: _Paths.basicWidget,
       page: () => const BasicWidgetView(),
       binding: BasicWidgetBinding(),
     ),
     GetPage(
-      name: _Paths.BW_TEXT,
+      name: _Paths.bwText,
       page: () => const BwTextPage(),
     ),
     GetPage(
-      name: _Paths.BW_BUTTON,
+      name: _Paths.bwButton,
       page: () => const BwButtonPage(),
     ),
     GetPage(
-      name: _Paths.BW_IMAGE,
+      name: _Paths.bwImage,
       page: () => const BwImagePage(),
     ),
     GetPage(
-      name: _Paths.BW_ICON,
+      name: _Paths.bwIcon,
       page: () => const BwIconPage(),
     ),
-    
+
     // Layout Structure Routes
     GetPage(
-      name: _Paths.LAYOUT_STRUCTURE,
+      name: _Paths.layoutStructure,
       page: () => const LayoutStructureView(),
       binding: LayoutStructureBinding(),
     ),
     GetPage(
-      name: _Paths.LS_CONTAINER,
+      name: _Paths.lsContainer,
       page: () => const LsContainerPage(),
     ),
     GetPage(
-      name: _Paths.LS_ROW_COLUMN,
+      name: _Paths.lsRowColumn,
       page: () => const LsRowColumnPage(),
     ),
     GetPage(
-      name: _Paths.LS_STACK,
+      name: _Paths.lsStack,
       page: () => const LsStackPage(),
     ),
-    
+
     // Input Forms Routes
     GetPage(
-      name: _Paths.INPUT_FORMS,
+      name: _Paths.inputForms,
       page: () => const InputFormsView(),
       binding: InputFormsBinding(),
     ),
     GetPage(
-      name: _Paths.IF_TEXTFIELD,
+      name: _Paths.ifTextfield,
       page: () => const IfTextfieldPage(),
     ),
     GetPage(
-      name: _Paths.IF_CHECKBOX,
+      name: _Paths.ifCheckbox,
       page: () => const IfCheckboxPage(),
     ),
     GetPage(
-      name: _Paths.IF_RADIO,
+      name: _Paths.ifRadio,
       page: () => const IfRadioPage(),
     ),
     GetPage(
-      name: _Paths.IF_SWITCH,
+      name: _Paths.ifSwitch,
       page: () => const IfSwitchPage(),
     ),
     GetPage(
-      name: _Paths.IF_DROPDOWN,
+      name: _Paths.ifDropdown,
       page: () => const IfDropdownPage(),
     ),
-    
+
     // Scrolling List Routes
     GetPage(
-      name: _Paths.SCROLLING_LIST,
+      name: _Paths.scrollingList,
       page: () => const ScrollingListView(),
       binding: ScrollingListBinding(),
     ),
     GetPage(
-      name: _Paths.SL_LISTVIEW,
+      name: _Paths.slListview,
       page: () => const SlListviewPage(),
     ),
     GetPage(
-      name: _Paths.SL_GRIDVIEW,
+      name: _Paths.slGridview,
       page: () => const SlGridviewPage(),
     ),
     GetPage(
-      name: _Paths.SL_PAGEVIEW,
+      name: _Paths.slPageview,
       page: () => const SlPageviewPage(),
     ),
-    
+
     // Other Routes
     GetPage(
-      name: _Paths.API_INTEGRATION,
+      name: _Paths.apiIntegration,
       page: () => const ApiIntegrationView(),
       binding: ApiIntegrationBinding(),
     ),
     GetPage(
-      name: _Paths.LOCAL_STORAGE,
+      name: _Paths.localStorage,
       page: () => const LocalStorageView(),
       binding: LocalStorageBinding(),
     ),
     GetPage(
-      name: _Paths.DEVICE_FEATURES,
+      name: _Paths.deviceFeatures,
       page: () => const DeviceFeaturesView(),
       binding: DeviceFeaturesBinding(),
     ),
     GetPage(
-      name: _Paths.STUDY_CASE,
+      name: _Paths.studyCase,
       page: () => const StudyCaseView(),
       binding: StudyCaseBinding(),
     ),

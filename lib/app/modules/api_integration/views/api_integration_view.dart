@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/api_integration_controller.dart';
 
-class Api_integrationView extends GetView<Api_integrationController> {
-  const Api_integrationView({super.key});
+class ApiIntegrationView extends GetView<ApiIntegrationController> {
+  const ApiIntegrationView({super.key});
 
   @override
   Widget build(BuildContext context) {

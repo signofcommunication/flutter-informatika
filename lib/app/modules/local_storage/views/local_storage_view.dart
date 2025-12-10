@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/local_storage_controller.dart';
 
-class Local_storageView extends GetView<Local_storageController> {
-  const Local_storageView({super.key});
+class LocalStorageView extends GetView<LocalStorageController> {
+  const LocalStorageView({super.key});
 
   @override
   Widget build(BuildContext context) {

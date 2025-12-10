@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/basic_widget_controller.dart';
-import '../../../routes/app_routes.dart';
+import '../../../routes/app_pages.dart';
 
 class BasicWidgetView extends GetView<BasicWidgetController> {
   const BasicWidgetView({super.key});
@@ -24,10 +24,10 @@ class BasicWidgetView extends GetView<BasicWidgetController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'Text Widget', Routes.BW_TEXT),
-          _buildMenuItem(context, 'Button Widget', Routes.BW_BUTTON),
-          _buildMenuItem(context, 'Image Widget', Routes.BW_IMAGE),
-          _buildMenuItem(context, 'Icon Widget', Routes.BW_ICON),
+          _buildMenuItem(context, 'Text Widget', Routes.bwText),
+          _buildMenuItem(context, 'Button Widget', Routes.bwButton),
+          _buildMenuItem(context, 'Image Widget', Routes.bwImage),
+          _buildMenuItem(context, 'Icon Widget', Routes.bwIcon),
         ],
       ),
     );

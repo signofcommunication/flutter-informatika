@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class LsContainerPage extends StatelessWidget {
   const LsContainerPage({super.key});
@@ -11,21 +10,21 @@ class LsContainerPage extends StatelessWidget {
         title: const Text('Container Layout Demo'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
+      body: const Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.view_quilt, size: 64),
-              const SizedBox(height: 16),
-              const Text(
-                'Container Layout',
+              Icon(Icons.widgets, size: 64),
+              SizedBox(height: 16),
+              Text(
+                'Container Widget',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 8),
-              const Text(
-                'This is a demo page for Container Layout.',
+              SizedBox(height: 8),
+              Text(
+                'This is a demo page for the Container widget.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
               ),

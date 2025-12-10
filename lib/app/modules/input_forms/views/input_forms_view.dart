@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/input_forms_controller.dart';
-import '../../../routes/app_routes.dart';
+import '../../../routes/app_pages.dart';
 
 class InputFormsView extends GetView<InputFormsController> {
   const InputFormsView({super.key});
@@ -24,11 +24,11 @@ class InputFormsView extends GetView<InputFormsController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'TextField', Routes.IF_TEXTFIELD),
-          _buildMenuItem(context, 'Checkbox', Routes.IF_CHECKBOX),
-          _buildMenuItem(context, 'Radio Button', Routes.IF_RADIO),
-          _buildMenuItem(context, 'Switch', Routes.IF_SWITCH),
-          _buildMenuItem(context, 'Dropdown', Routes.IF_DROPDOWN),
+          _buildMenuItem(context, 'TextField', Routes.ifTextfield),
+          _buildMenuItem(context, 'Checkbox', Routes.ifCheckbox),
+          _buildMenuItem(context, 'Radio Button', Routes.ifRadio),
+          _buildMenuItem(context, 'Switch', Routes.ifSwitch),
+          _buildMenuItem(context, 'Dropdown', Routes.ifDropdown),
         ],
       ),
     );

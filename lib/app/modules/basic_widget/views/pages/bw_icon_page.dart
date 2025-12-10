@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class BwIconPage extends StatelessWidget {
   const BwIconPage({super.key});
@@ -11,20 +10,20 @@ class BwIconPage extends StatelessWidget {
         title: const Text('Icon Widget Demo'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
+      body: const Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.widgets, size: 64),
-              const SizedBox(height: 16),
-              const Text(
+              Icon(Icons.widgets, size: 64),
+              SizedBox(height: 16),
+              Text(
                 'Icon Widget',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 8),
-              const Text(
+              SizedBox(height: 8),
+              Text(
                 'This is a demo page for the Icon widget.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),

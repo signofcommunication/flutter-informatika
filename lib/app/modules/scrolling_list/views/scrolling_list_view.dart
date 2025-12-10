@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/scrolling_list_controller.dart';
-import '../../../routes/app_routes.dart';
+import '../../../routes/app_pages.dart';
 
 class ScrollingListView extends GetView<ScrollingListController> {
   const ScrollingListView({super.key});
@@ -24,9 +24,9 @@ class ScrollingListView extends GetView<ScrollingListController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'ListView', Routes.SL_LISTVIEW),
-          _buildMenuItem(context, 'GridView', Routes.SL_GRIDVIEW),
-          _buildMenuItem(context, 'PageView', Routes.SL_PAGEVIEW),
+          _buildMenuItem(context, 'ListView', Routes.slListview),
+          _buildMenuItem(context, 'GridView', Routes.slGridview),
+          _buildMenuItem(context, 'PageView', Routes.slPageview),
         ],
       ),
     );

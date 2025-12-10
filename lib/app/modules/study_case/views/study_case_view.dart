@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/study_case_controller.dart';
 
-class Study_caseView extends GetView<Study_caseController> {
-  const Study_caseView({super.key});
+class StudyCaseView extends GetView<StudyCaseController> {
+  const StudyCaseView({super.key});
 
   @override
   Widget build(BuildContext context) {

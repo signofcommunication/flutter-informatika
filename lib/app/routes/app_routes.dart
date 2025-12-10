@@ -2,140 +2,140 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  
-  static const HOME = _Paths.HOME;
-  static const WIDGETS = _Paths.WIDGETS;
-  
+
+  static const home = _Paths.home;
+  static const widgets = _Paths.widgets;
+
   // Material Design Routes
-  static const MATERIAL_DESIGN = _Paths.MATERIAL_DESIGN;
-  static const MD_APPBAR = _Paths.MD_APPBAR;
-  static const MD_MATERIALAPP = _Paths.MD_MATERIALAPP;
-  static const MD_SCAFFOLD = _Paths.MD_SCAFFOLD;
-  static const MD_CONTAINER = _Paths.MD_CONTAINER;
-  static const MD_CENTER = _Paths.MD_CENTER;
-  static const MD_COLUMN = _Paths.MD_COLUMN;
-  static const MD_ROW = _Paths.MD_ROW;
-  static const MD_LISTVIEW = _Paths.MD_LISTVIEW;
-  static const MD_GRIDVIEW = _Paths.MD_GRIDVIEW;
-  static const MD_STACK = _Paths.MD_STACK;
-  static const MD_ASPECTRATIO = _Paths.MD_ASPECTRATIO;
-  static const MD_PADDING = _Paths.MD_PADDING;
-  static const MD_EXPANDED = _Paths.MD_EXPANDED;
-  static const MD_SIZEDBOX = _Paths.MD_SIZEDBOX;
-  static const MD_CARD = _Paths.MD_CARD;
-  static const MD_INKWELL = _Paths.MD_INKWELL;
-  static const MD_IMAGE = _Paths.MD_IMAGE;
-  static const MD_CIRCLEAVATAR = _Paths.MD_CIRCLEAVATAR;
-  static const MD_ICON = _Paths.MD_ICON;
-  static const MD_BOTTOMSHEET = _Paths.MD_BOTTOMSHEET;
-  static const MD_ALERTDIALOG = _Paths.MD_ALERTDIALOG;
-  static const MD_SNACKBAR = _Paths.MD_SNACKBAR;
-  static const MD_DRAWER = _Paths.MD_DRAWER;
-  static const MD_BOTTOMNAVBAR = _Paths.MD_BOTTOMNAVBAR;
-  
+  static const materialDesign = _Paths.materialDesign;
+  static const mdAppbar = _Paths.mdAppbar;
+  static const mdMaterialapp = _Paths.mdMaterialapp;
+  static const mdScaffold = _Paths.mdScaffold;
+  static const mdContainer = _Paths.mdContainer;
+  static const mdCenter = _Paths.mdCenter;
+  static const mdColumn = _Paths.mdColumn;
+  static const mdRow = _Paths.mdRow;
+  static const mdListview = _Paths.mdListview;
+  static const mdGridview = _Paths.mdGridview;
+  static const mdStack = _Paths.mdStack;
+  static const mdAspectratio = _Paths.mdAspectratio;
+  static const mdPadding = _Paths.mdPadding;
+  static const mdExpanded = _Paths.mdExpanded;
+  static const mdSizedbox = _Paths.mdSizedbox;
+  static const mdCard = _Paths.mdCard;
+  static const mdInkwell = _Paths.mdInkwell;
+  static const mdImage = _Paths.mdImage;
+  static const mdCircleavatar = _Paths.mdCircleavatar;
+  static const mdIcon = _Paths.mdIcon;
+  static const mdBottomsheet = _Paths.mdBottomsheet;
+  static const mdAlertdialog = _Paths.mdAlertdialog;
+  static const mdSnackbar = _Paths.mdSnackbar;
+  static const mdDrawer = _Paths.mdDrawer;
+  static const mdBottomnavbar = _Paths.mdBottomnavbar;
+
   // Basic Widget Routes
-  static const BASIC_WIDGET = _Paths.BASIC_WIDGET;
-  static const BW_TEXT = _Paths.BW_TEXT;
-  static const BW_BUTTON = _Paths.BW_BUTTON;
-  static const BW_IMAGE = _Paths.BW_IMAGE;
-  static const BW_ICON = _Paths.BW_ICON;
-  
+  static const basicWidget = _Paths.basicWidget;
+  static const bwText = _Paths.bwText;
+  static const bwButton = _Paths.bwButton;
+  static const bwImage = _Paths.bwImage;
+  static const bwIcon = _Paths.bwIcon;
+
   // Layout Structure Routes
-  static const LAYOUT_STRUCTURE = _Paths.LAYOUT_STRUCTURE;
-  static const LS_CONTAINER = _Paths.LS_CONTAINER;
-  static const LS_ROW_COLUMN = _Paths.LS_ROW_COLUMN;
-  static const LS_STACK = _Paths.LS_STACK;
-  
+  static const layoutStructure = _Paths.layoutStructure;
+  static const lsContainer = _Paths.lsContainer;
+  static const lsRowColumn = _Paths.lsRowColumn;
+  static const lsStack = _Paths.lsStack;
+
   // Input Forms Routes
-  static const INPUT_FORMS = _Paths.INPUT_FORMS;
-  static const IF_TEXTFIELD = _Paths.IF_TEXTFIELD;
-  static const IF_CHECKBOX = _Paths.IF_CHECKBOX;
-  static const IF_RADIO = _Paths.IF_RADIO;
-  static const IF_SWITCH = _Paths.IF_SWITCH;
-  static const IF_DROPDOWN = _Paths.IF_DROPDOWN;
-  
+  static const inputForms = _Paths.inputForms;
+  static const ifTextfield = _Paths.ifTextfield;
+  static const ifCheckbox = _Paths.ifCheckbox;
+  static const ifRadio = _Paths.ifRadio;
+  static const ifSwitch = _Paths.ifSwitch;
+  static const ifDropdown = _Paths.ifDropdown;
+
   // Scrolling List Routes
-  static const SCROLLING_LIST = _Paths.SCROLLING_LIST;
-  static const SL_LISTVIEW = _Paths.SL_LISTVIEW;
-  static const SL_GRIDVIEW = _Paths.SL_GRIDVIEW;
-  static const SL_PAGEVIEW = _Paths.SL_PAGEVIEW;
-  
+  static const scrollingList = _Paths.scrollingList;
+  static const slListview = _Paths.slListview;
+  static const slGridview = _Paths.slGridview;
+  static const slPageview = _Paths.slPageview;
+
   // API Integration
-  static const API_INTEGRATION = _Paths.API_INTEGRATION;
-  
+  static const apiIntegration = _Paths.apiIntegration;
+
   // Local Storage
-  static const LOCAL_STORAGE = _Paths.LOCAL_STORAGE;
-  
+  static const localStorage = _Paths.localStorage;
+
   // Device Features
-  static const DEVICE_FEATURES = _Paths.DEVICE_FEATURES;
-  
+  static const deviceFeatures = _Paths.deviceFeatures;
+
   // Study Case
-  static const STUDY_CASE = _Paths.STUDY_CASE;
+  static const studyCase = _Paths.studyCase;
 }
 
 abstract class _Paths {
   _Paths._();
-  
-  static const HOME = '/home';
-  static const WIDGETS = '/widgets';
-  
+
+  static const home = '/home';
+  static const widgets = '/widgets';
+
   // Material Design Paths
-  static const MATERIAL_DESIGN = '/material-design';
-  static const MD_APPBAR = '/material-design/appbar';
-  static const MD_MATERIALAPP = '/material-design/materialapp';
-  static const MD_SCAFFOLD = '/material-design/scaffold';
-  static const MD_CONTAINER = '/material-design/container';
-  static const MD_CENTER = '/material-design/center';
-  static const MD_COLUMN = '/material-design/column';
-  static const MD_ROW = '/material-design/row';
-  static const MD_LISTVIEW = '/material-design/listview';
-  static const MD_GRIDVIEW = '/material-design/gridview';
-  static const MD_STACK = '/material-design/stack';
-  static const MD_ASPECTRATIO = '/material-design/aspectratio';
-  static const MD_PADDING = '/material-design/padding';
-  static const MD_EXPANDED = '/material-design/expanded';
-  static const MD_SIZEDBOX = '/material-design/sizedbox';
-  static const MD_CARD = '/material-design/card';
-  static const MD_INKWELL = '/material-design/inkwell';
-  static const MD_IMAGE = '/material-design/image';
-  static const MD_CIRCLEAVATAR = '/material-design/circleavatar';
-  static const MD_ICON = '/material-design/icon';
-  static const MD_BOTTOMSHEET = '/material-design/bottomsheet';
-  static const MD_ALERTDIALOG = '/material-design/alertdialog';
-  static const MD_SNACKBAR = '/material-design/snackbar';
-  static const MD_DRAWER = '/material-design/drawer';
-  static const MD_BOTTOMNAVBAR = '/material-design/bottomnavbar';
-  
+  static const materialDesign = '/material-design';
+  static const mdAppbar = '/material-design/appbar';
+  static const mdMaterialapp = '/material-design/materialapp';
+  static const mdScaffold = '/material-design/scaffold';
+  static const mdContainer = '/material-design/container';
+  static const mdCenter = '/material-design/center';
+  static const mdColumn = '/material-design/column';
+  static const mdRow = '/material-design/row';
+  static const mdListview = '/material-design/listview';
+  static const mdGridview = '/material-design/gridview';
+  static const mdStack = '/material-design/stack';
+  static const mdAspectratio = '/material-design/aspectratio';
+  static const mdPadding = '/material-design/padding';
+  static const mdExpanded = '/material-design/expanded';
+  static const mdSizedbox = '/material-design/sizedbox';
+  static const mdCard = '/material-design/card';
+  static const mdInkwell = '/material-design/inkwell';
+  static const mdImage = '/material-design/image';
+  static const mdCircleavatar = '/material-design/circleavatar';
+  static const mdIcon = '/material-design/icon';
+  static const mdBottomsheet = '/material-design/bottomsheet';
+  static const mdAlertdialog = '/material-design/alertdialog';
+  static const mdSnackbar = '/material-design/snackbar';
+  static const mdDrawer = '/material-design/drawer';
+  static const mdBottomnavbar = '/material-design/bottomnavbar';
+
   // Basic Widget Paths
-  static const BASIC_WIDGET = '/basic-widget';
-  static const BW_TEXT = '/basic-widget/text';
-  static const BW_BUTTON = '/basic-widget/button';
-  static const BW_IMAGE = '/basic-widget/image';
-  static const BW_ICON = '/basic-widget/icon';
-  
+  static const basicWidget = '/basic-widget';
+  static const bwText = '/basic-widget/text';
+  static const bwButton = '/basic-widget/button';
+  static const bwImage = '/basic-widget/image';
+  static const bwIcon = '/basic-widget/icon';
+
   // Layout Structure Paths
-  static const LAYOUT_STRUCTURE = '/layout-structure';
-  static const LS_CONTAINER = '/layout-structure/container';
-  static const LS_ROW_COLUMN = '/layout-structure/row-column';
-  static const LS_STACK = '/layout-structure/stack';
-  
+  static const layoutStructure = '/layout-structure';
+  static const lsContainer = '/layout-structure/container';
+  static const lsRowColumn = '/layout-structure/row-column';
+  static const lsStack = '/layout-structure/stack';
+
   // Input Forms Paths
-  static const INPUT_FORMS = '/input-forms';
-  static const IF_TEXTFIELD = '/input-forms/textfield';
-  static const IF_CHECKBOX = '/input-forms/checkbox';
-  static const IF_RADIO = '/input-forms/radio';
-  static const IF_SWITCH = '/input-forms/switch';
-  static const IF_DROPDOWN = '/input-forms/dropdown';
-  
+  static const inputForms = '/input-forms';
+  static const ifTextfield = '/input-forms/textfield';
+  static const ifCheckbox = '/input-forms/checkbox';
+  static const ifRadio = '/input-forms/radio';
+  static const ifSwitch = '/input-forms/switch';
+  static const ifDropdown = '/input-forms/dropdown';
+
   // Scrolling List Paths
-  static const SCROLLING_LIST = '/scrolling-list';
-  static const SL_LISTVIEW = '/scrolling-list/listview';
-  static const SL_GRIDVIEW = '/scrolling-list/gridview';
-  static const SL_PAGEVIEW = '/scrolling-list/pageview';
-  
+  static const scrollingList = '/scrolling-list';
+  static const slListview = '/scrolling-list/listview';
+  static const slGridview = '/scrolling-list/gridview';
+  static const slPageview = '/scrolling-list/pageview';
+
   // Other Paths
-  static const API_INTEGRATION = '/api-integration';
-  static const LOCAL_STORAGE = '/local-storage';
-  static const DEVICE_FEATURES = '/device-features';
-  static const STUDY_CASE = '/study-case';
+  static const apiIntegration = '/api-integration';
+  static const localStorage = '/local-storage';
+  static const deviceFeatures = '/device-features';
+  static const studyCase = '/study-case';
 }

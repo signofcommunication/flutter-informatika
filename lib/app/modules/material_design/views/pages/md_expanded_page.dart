@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class MdExpandedPage extends StatelessWidget {
   const MdExpandedPage({super.key});
@@ -11,20 +10,20 @@ class MdExpandedPage extends StatelessWidget {
         title: const Text('Expanded Demo'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
+      body: const Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.widgets, size: 64),
-              const SizedBox(height: 16),
-              const Text(
+              Icon(Icons.widgets, size: 64),
+              SizedBox(height: 16),
+              Text(
                 'Expanded Widget',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 8),
-              const Text(
+              SizedBox(height: 8),
+              Text(
                 'This is a demo page for the Expanded widget.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/layout_structure_controller.dart';
-import '../../../routes/app_routes.dart';
+import '../../../routes/app_pages.dart';
 
 class LayoutStructureView extends GetView<LayoutStructureController> {
   const LayoutStructureView({super.key});
@@ -24,9 +24,9 @@ class LayoutStructureView extends GetView<LayoutStructureController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'Container Layout', Routes.LS_CONTAINER),
-          _buildMenuItem(context, 'Row & Column Layout', Routes.LS_ROW_COLUMN),
-          _buildMenuItem(context, 'Stack Layout', Routes.LS_STACK),
+          _buildMenuItem(context, 'Container Layout', Routes.lsContainer),
+          _buildMenuItem(context, 'Row & Column Layout', Routes.lsRowColumn),
+          _buildMenuItem(context, 'Stack Layout', Routes.lsStack),
         ],
       ),
     );
