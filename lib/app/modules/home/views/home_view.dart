@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../controllers/home_controller.dart';
 import '../../../routes/app_pages.dart';
 
@@ -10,116 +11,101 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Informatika App - Home'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 16.0),
-            child: Text(
-              'Flutter Training Modules',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+        centerTitle: true,
+        title: const Text('Mobile Programming'),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF7F5AF0), Color(0xFF2CB67D)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
-          _buildMenuCard(
-            context,
-            'Widgets',
-            'Explore Flutter Widgets',
-            Icons.widgets,
-            Routes.widgets,
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.only(bottom: 16),
+        children: [
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 16, 16, 4),
+            child: Text(
+              'Modul Praktikum  Universitas Matana',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.black54,
+              ),
+            ),
           ),
-          _buildMenuCard(
-            context,
-            'Material Design',
-            'Material Design Components',
-            Icons.design_services,
-            Routes.materialDesign,
+          _HomeMenuTile(
+            icon: Icons.widgets,
+            color: Colors.teal,
+            title: 'Widgets',
+            subtitle: 'Contoh widget di flutter',
+            routeName: Routes.widgets,
           ),
-          _buildMenuCard(
-            context,
-            'Basic Widget',
-            'Basic Widget Examples',
-            Icons.auto_awesome,
-            Routes.basicWidget,
+          _HomeMenuTile(
+            icon: Icons.cloud_sync,
+            color: Colors.indigo,
+            title: 'API Integration',
+            subtitle: 'contoh latihan webservice',
+            routeName: Routes.api,
           ),
-          _buildMenuCard(
-            context,
-            'Layout Structure',
-            'Layout and Structure',
-            Icons.view_quilt,
-            Routes.layoutStructure,
+          _HomeMenuTile(
+            icon: Icons.storage,
+            color: Colors.deepOrange,
+            title: 'Locale Storage',
+            subtitle: 'contoh latihan penyimpanan di lokal',
+            routeName: Routes.storage,
           ),
-          _buildMenuCard(
-            context,
-            'Input Forms',
-            'Form Input Widgets',
-            Icons.input,
-            Routes.inputForms,
+          _HomeMenuTile(
+            icon: Icons.devices,
+            color: Colors.green,
+            title: 'Device Features',
+            subtitle: 'contoh latihan mengakses hardware',
+            routeName: Routes.device,
           ),
-          _buildMenuCard(
-            context,
-            'Scrolling List',
-            'Scrolling and List Widgets',
-            Icons.list,
-            Routes.scrollingList,
-          ),
-          _buildMenuCard(
-            context,
-            'API Integration',
-            'REST API Integration',
-            Icons.cloud,
-            Routes.apiIntegration,
-          ),
-          _buildMenuCard(
-            context,
-            'Local Storage',
-            'Local Data Storage',
-            Icons.storage,
-            Routes.localStorage,
-          ),
-          _buildMenuCard(
-            context,
-            'Device Features',
-            'Device Hardware Features',
-            Icons.phone_android,
-            Routes.deviceFeatures,
-          ),
-          _buildMenuCard(
-            context,
-            'Study Case',
-            'Practical Study Cases',
-            Icons.school,
-            Routes.studyCase,
+          _HomeMenuTile(
+            icon: Icons.bolt,
+            color: Colors.amber,
+            title: 'Project Base',
+            subtitle: 'contoh latihan studi kasus',
+            routeName: Routes.project,
           ),
         ],
       ),
     );
   }
+}
 
-  Widget _buildMenuCard(
-    BuildContext context,
-    String title,
-    String subtitle,
-    IconData icon,
-    String route,
-  ) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 12.0),
-      elevation: 2,
-      child: ListTile(
-        leading:
-            Icon(icon, size: 40, color: Theme.of(context).colorScheme.primary),
-        title: Text(
-          title,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-        ),
-        subtitle: Text(subtitle),
-        trailing: const Icon(Icons.arrow_forward_ios),
-        onTap: () => Get.toNamed(route),
+class _HomeMenuTile extends StatelessWidget {
+  final IconData icon;
+  final Color color;
+  final String title;
+  final String subtitle;
+  final String? routeName;
+
+  const _HomeMenuTile({
+    required this.icon,
+    required this.color,
+    required this.title,
+    required this.subtitle,
+    this.routeName,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(
+        backgroundColor: color.withOpacity(0.15),
+        child: Icon(icon, color: color),
       ),
+      title: Text(title),
+      subtitle: Text(subtitle),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: routeName != null ? () => Get.toNamed(routeName!) : null,
     );
   }
 }
+
+// Grid material widgets sekarang hanya ada di WidgetsView (app/modules/widgets/views/widgets_view.dart)

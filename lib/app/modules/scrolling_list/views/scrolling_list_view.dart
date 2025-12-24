@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/scrolling_list_controller.dart';
-import '../../../routes/app_pages.dart';
 
 class ScrollingListView extends GetView<ScrollingListController> {
   const ScrollingListView({super.key});
@@ -15,8 +14,8 @@ class ScrollingListView extends GetView<ScrollingListController> {
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
-        children: [
-          const Padding(
+        children: const [
+          Padding(
             padding: EdgeInsets.symmetric(vertical: 16.0),
             child: Text(
               'Scrolling List Examples',
@@ -24,21 +23,26 @@ class ScrollingListView extends GetView<ScrollingListController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'ListView', Routes.slListview),
-          _buildMenuItem(context, 'GridView', Routes.slGridview),
-          _buildMenuItem(context, 'PageView', Routes.slPageview),
+          _StaticMenuItem(title: 'ListView'),
+          _StaticMenuItem(title: 'GridView'),
+          _StaticMenuItem(title: 'PageView'),
         ],
       ),
     );
   }
+}
 
-  Widget _buildMenuItem(BuildContext context, String title, String route) {
+class _StaticMenuItem extends StatelessWidget {
+  final String title;
+  const _StaticMenuItem({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.only(bottom: 8.0),
       child: ListTile(
         title: Text(title),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-        onTap: () => Get.toNamed(route),
       ),
     );
   }

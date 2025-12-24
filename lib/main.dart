@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
-import 'pages/home_page.dart';
 
 void main() {
   runApp(const InformatikaApp());
@@ -14,13 +13,13 @@ class InformatikaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Informatika App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: false,
+        useMaterial3: true,
       ),
-      home: HomePage(),
+      initialRoute: AppPages.initial,
       getPages: AppPages.routes,
-      debugShowCheckedModeBanner: false,
     );
   }
 }

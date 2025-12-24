@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/layout_structure_controller.dart';
-import '../../../routes/app_pages.dart';
 
 class LayoutStructureView extends GetView<LayoutStructureController> {
   const LayoutStructureView({super.key});
@@ -15,8 +14,8 @@ class LayoutStructureView extends GetView<LayoutStructureController> {
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
-        children: [
-          const Padding(
+        children: const [
+          Padding(
             padding: EdgeInsets.symmetric(vertical: 16.0),
             child: Text(
               'Layout Structure Examples',
@@ -24,21 +23,26 @@ class LayoutStructureView extends GetView<LayoutStructureController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'Container Layout', Routes.lsContainer),
-          _buildMenuItem(context, 'Row & Column Layout', Routes.lsRowColumn),
-          _buildMenuItem(context, 'Stack Layout', Routes.lsStack),
+          _StaticMenuItem(title: 'Container Layout'),
+          _StaticMenuItem(title: 'Row & Column Layout'),
+          _StaticMenuItem(title: 'Stack Layout'),
         ],
       ),
     );
   }
+}
 
-  Widget _buildMenuItem(BuildContext context, String title, String route) {
+class _StaticMenuItem extends StatelessWidget {
+  final String title;
+  const _StaticMenuItem({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.only(bottom: 8.0),
       child: ListTile(
         title: Text(title),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-        onTap: () => Get.toNamed(route),
       ),
     );
   }

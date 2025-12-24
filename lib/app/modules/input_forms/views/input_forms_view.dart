@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/input_forms_controller.dart';
-import '../../../routes/app_pages.dart';
 
 class InputFormsView extends GetView<InputFormsController> {
   const InputFormsView({super.key});
@@ -15,8 +14,8 @@ class InputFormsView extends GetView<InputFormsController> {
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
-        children: [
-          const Padding(
+        children: const [
+          Padding(
             padding: EdgeInsets.symmetric(vertical: 16.0),
             child: Text(
               'Form Input Examples',
@@ -24,23 +23,28 @@ class InputFormsView extends GetView<InputFormsController> {
               textAlign: TextAlign.center,
             ),
           ),
-          _buildMenuItem(context, 'TextField', Routes.ifTextfield),
-          _buildMenuItem(context, 'Checkbox', Routes.ifCheckbox),
-          _buildMenuItem(context, 'Radio Button', Routes.ifRadio),
-          _buildMenuItem(context, 'Switch', Routes.ifSwitch),
-          _buildMenuItem(context, 'Dropdown', Routes.ifDropdown),
+          _StaticMenuItem(title: 'TextField'),
+          _StaticMenuItem(title: 'Checkbox'),
+          _StaticMenuItem(title: 'Radio Button'),
+          _StaticMenuItem(title: 'Switch'),
+          _StaticMenuItem(title: 'Dropdown'),
         ],
       ),
     );
   }
+}
 
-  Widget _buildMenuItem(BuildContext context, String title, String route) {
+class _StaticMenuItem extends StatelessWidget {
+  final String title;
+  const _StaticMenuItem({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.only(bottom: 8.0),
       child: ListTile(
         title: Text(title),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-        onTap: () => Get.toNamed(route),
       ),
     );
   }
